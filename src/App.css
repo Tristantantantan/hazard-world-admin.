@@ -580,6 +580,74 @@ body {
 
 html,
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.announcement-details-section {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #101820, #1b2735);
+  color: #ffffff;
+  padding-top: 100px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.announcement-details-card {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.announcement-details-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.announcement-details-empty {
+  padding: 100px 20px;
+}
+
+.announcement-details-loading {
+  height: 100vh;
+  background: #101820;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .announcement-details-card {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .announcement-details-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcement-details-card {
+    max-width: 95%;
+    padding: 0.9rem;
+  }
+
+  .announcement-details-text {
+    font-size: 0.9rem;
+  }
+
+  .announcement-details-section {
+    padding-top: 80px;
+  }
+}
+
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
