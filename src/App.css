@@ -515,3 +515,47 @@
     font-size: 0.95rem;
   }
 }
+
+.login-bg {
+  min-height: 100vh;
+  background: url("/src/assets/background.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* to avoid navbar overlap */
+}
+
+.login-card {
+  border: none;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.login-card input {
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.login-card button {
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 1.5rem;
+  }
+
+  .login-card .card-title {
+    font-size: 1.4rem;
+  }
+
+  .login-card input {
+    font-size: 0.9rem;
+  }
+
+  .login-card button {
+    font-size: 1rem;
+  }
+}
