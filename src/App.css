@@ -481,65 +481,103 @@ body {
   }
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .announcements-section {
   min-height: 100vh;
-  padding-top: 80px; /* keeps space below navbar */
-  background: url("/src/assets/background.jpg") no-repeat center center/cover;
-  color: white;
+  background: linear-gradient(180deg, #101820, #1b2735);
+  color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .announcements-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffffff;
 }
 
 .announcement-card {
   border: none;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .announcement-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-.announcement-card .card-title {
-  color: #222;
-}
-
-.announcement-card .card-text {
-  color: #555;
+/* 📱 Modal Styles (Mobile Optimized) */
+.announcement-modal .modal-dialog {
+  max-width: 95%;
+  margin: 1rem auto;
 }
 
 .announcement-modal .modal-content {
-  border-radius: 12px;
+  background: #1b2735;
+  color: #fff;
+  border-radius: 10px;
 }
 
-/* Mobile adjustments */
+.announcement-modal .modal-header,
+.announcement-modal .modal-footer {
+  border: none;
+}
+
+.modal-title-sm {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.modal-body-sm {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* 📱 Responsive adjustments */
 @media (max-width: 768px) {
   .announcements-title {
     font-size: 1.6rem;
   }
 
   .announcement-card {
-    margin: 0 auto;
-    width: 95%;
+    margin-bottom: 1rem;
   }
 
-  .announcement-card .card-title {
+  .modal-title-sm {
     font-size: 1.1rem;
   }
 
-  .announcement-card .card-text {
-    font-size: 0.95rem;
-  }
-
-  .announcement-modal .modal-body {
-    font-size: 0.95rem;
+  .modal-body-sm {
+    font-size: 0.9rem;
   }
 }
+
+@media (max-width: 480px) {
+  .announcements-section {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+
+  .announcements-title {
+    font-size: 1.4rem;
+  }
+
+  .modal-title-sm {
+    font-size: 1rem;
+  }
+
+  .modal-body-sm {
+    font-size: 0.85rem;
+  }
+}
+
 html,
 body {
   height: 100%;

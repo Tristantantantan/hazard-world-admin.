@@ -53,7 +53,9 @@ const Announcements = () => {
                       </Card.Text>
                       <Button
                         variant="primary"
-                        onClick={() => handleViewAnnouncement({ id, title, body })}
+                        onClick={() =>
+                          handleViewAnnouncement({ id, title, body })
+                        }
                         className="mt-auto w-100"
                       >
                         View More
@@ -79,13 +81,20 @@ const Announcements = () => {
             className="announcement-modal"
           >
             <Modal.Header closeButton>
-              <Modal.Title>{selectedAnnouncement?.title}</Modal.Title>
+              <Modal.Title className="modal-title-sm">
+                {selectedAnnouncement?.title}
+              </Modal.Title>
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body className="modal-body-sm">
               <p>{selectedAnnouncement?.body}</p>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={handleCloseModal}>
+              <Button
+                variant="secondary"
+                size="sm"
+                className="w-100"
+                onClick={handleCloseModal}
+              >
                 Close
               </Button>
             </Modal.Footer>
