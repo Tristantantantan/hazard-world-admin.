@@ -455,3 +455,63 @@
     max-width: 90%;
   }
 }
+
+.announcements-section {
+  min-height: 100vh;
+  padding-top: 80px; /* keeps space below navbar */
+  background: linear-gradient(180deg, #101820, #1b2735);
+  color: white;
+}
+
+.announcements-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.announcement-card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.announcement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.announcement-card .card-title {
+  color: #222;
+}
+
+.announcement-card .card-text {
+  color: #555;
+}
+
+.announcement-modal .modal-content {
+  border-radius: 12px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .announcements-title {
+    font-size: 1.6rem;
+  }
+
+  .announcement-card {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .announcement-card .card-title {
+    font-size: 1.1rem;
+  }
+
+  .announcement-card .card-text {
+    font-size: 0.95rem;
+  }
+
+  .announcement-modal .modal-body {
+    font-size: 0.95rem;
+  }
+}
