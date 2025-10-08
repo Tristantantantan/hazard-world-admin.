@@ -6,16 +6,12 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div className="about-section d-flex align-items-center">
-        <Container className="py-5">
+      <div className="about-section">
+        <Container className="about-container">
           <Row className="align-items-center">
-            {/* Text section */}
-            <Col
-              xs={12}
-              md={6}
-              className="text-center text-md-start mb-4 mb-md-0 px-3"
-            >
-              <h1 className="about-title mb-3">About Hazard World</h1>
+            {/* Text Section */}
+            <Col xs={12} md={6} className="text-center text-md-start mb-4 mb-md-0">
+              <h1 className="about-title">About Hazard World</h1>
               <p className="about-text">
                 <strong>Hazard World</strong> is an educational game designed
                 for all freshman students to explore their knowledge of how to
@@ -40,8 +36,8 @@ const About = () => {
               </p>
             </Col>
 
-            {/* Image section */}
-            <Col xs={12} md={6} className="text-center px-3">
+            {/* Image Section */}
+            <Col xs={12} md={6} className="text-center">
               <img
                 src={hazardBg}
                 alt="Hazard World Screenshot"
