@@ -192,6 +192,122 @@
   box-shadow: 0 6px 14px rgba(37, 99, 235, 0.4);
 }
 
+/* ============================== */
+/* Modal Responsive Adjustments   */
+/* ============================== */
+
+.announcement-modal .modal-dialog {
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+.announcement-modal .modal-content {
+  background: rgba(17, 25, 40, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1rem;
+}
+
+/* Header + Title */
+.announcement-modal .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  justify-content: center;
+}
+
+.announcement-modal .modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+/* Body */
+.announcement-modal .modal-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f3f4f6;
+  max-height: 60vh; /* prevent modal from exceeding viewport */
+  overflow-y: auto; /* scroll only inside modal body */
+  padding: 0.8rem;
+}
+
+/* Footer */
+.announcement-modal .modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  justify-content: center;
+}
+
+/* Button styling */
+.announcement-modal .btn {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.announcement-modal .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+}
+
+/* ===================================== */
+/* 📱 Mobile Friendly Adjustments Below  */
+/* ===================================== */
+@media (max-width: 768px) {
+  .announcement-modal .modal-dialog {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+
+  .announcement-modal .modal-content {
+    padding: 0.5rem 0.75rem;
+    border-radius: 12px;
+  }
+
+  .announcement-modal .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .announcement-modal .modal-body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-height: 55vh;
+    padding: 0.6rem;
+  }
+
+  .announcement-modal .btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcement-modal .modal-dialog {
+    max-width: 95%;
+    margin: 0.5rem auto;
+  }
+
+  .announcement-modal .modal-body {
+    max-height: 50vh;
+    font-size: 0.9rem;
+  }
+
+  .announcement-modal .modal-title {
+    font-size: 1rem;
+  }
+
+  .announcement-modal .btn {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
 /* Modal glass effect */
 .modal-content {
   background: rgba(15, 15, 15, 0.75); /* darker & more transparent */
@@ -490,7 +606,7 @@ body {
 
 .announcements-section {
   min-height: 100vh;
-  background: linear-gradient(180deg, #101820, #1b2735);
+  background: url("/src/assets/background.jpg") no-repeat center center/cover;
   color: #ffffff;
   padding-top: 80px;
   padding-bottom: 40px;
