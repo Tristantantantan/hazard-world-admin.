@@ -1,7 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import hazardBg from '../assets/hazard-bg.png';
 import Navbar from '../components/Navbar';
-import './About.css'; // 👈 make sure to create & import this CSS file
 
 const About = () => {
   return (
