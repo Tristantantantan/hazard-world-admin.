@@ -515,20 +515,36 @@
     font-size: 0.95rem;
   }
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* prevents scrollbars */
+}
 
 .login-bg {
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   background: url("/src/assets/background.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px; /* to avoid navbar overlap */
+  padding-top: 60px; /* avoid navbar overlap */
+  box-sizing: border-box;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 15px;
 }
 
 .login-card {
   border: none;
   border-radius: 16px;
   background-color: #ffffff;
+  padding: 1.5rem;
 }
 
 .login-card input {
@@ -541,21 +557,18 @@
   border-radius: 10px;
 }
 
-/* Mobile optimization */
+/* Responsive adjustments for smaller devices */
 @media (max-width: 768px) {
   .login-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .login-card .card-title {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
 
-  .login-card input {
-    font-size: 0.9rem;
-  }
-
+  .login-card input,
   .login-card button {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 import { useContext, useState } from 'react';
-import { Card, Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Card, Form, Button, Container } from 'react-bootstrap';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
@@ -45,79 +45,73 @@ const Login = () => {
     <>
       <Navbar />
       <div className="login-bg">
-        <Container className="py-5 d-flex justify-content-center align-items-center min-vh-100">
-          <Row className="justify-content-center w-100">
-            <Col xs={12} sm={10} md={8} lg={5}>
-              <Card className="login-card shadow-lg p-4">
-                <Card.Title className="text-center mb-4 fs-3">
-                  Login as Admin
-                </Card.Title>
-                <Card.Body>
-                  <Formik
-                    initialValues={{ email: '', password: '' }}
-                    validationSchema={validationSchema}
-                    onSubmit={handleSignIn}
-                  >
-                    {({
-                      handleSubmit,
-                      handleChange,
-                      values,
-                      touched,
-                      errors,
-                      isSubmitting,
-                    }) => (
-                      <Form noValidate onSubmit={handleSubmit}>
-                        <Form.Group controlId="formEmail" className="mb-3">
-                          <Form.Label>Email</Form.Label>
-                          <Form.Control
-                            type="email"
-                            name="email"
-                            placeholder="Enter email"
-                            value={values.email}
-                            onChange={handleChange}
-                            isInvalid={touched.email && !!errors.email}
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {errors.email}
-                          </Form.Control.Feedback>
-                        </Form.Group>
+        <Container className="login-container">
+          <Card className="login-card shadow-lg">
+            <Card.Title className="text-center mb-4 fs-4">Login as Admin</Card.Title>
+            <Card.Body>
+              <Formik
+                initialValues={{ email: '', password: '' }}
+                validationSchema={validationSchema}
+                onSubmit={handleSignIn}
+              >
+                {({
+                  handleSubmit,
+                  handleChange,
+                  values,
+                  touched,
+                  errors,
+                  isSubmitting,
+                }) => (
+                  <Form noValidate onSubmit={handleSubmit}>
+                    <Form.Group controlId="formEmail" className="mb-3">
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control
+                        type="email"
+                        name="email"
+                        placeholder="Enter email"
+                        value={values.email}
+                        onChange={handleChange}
+                        isInvalid={touched.email && !!errors.email}
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.email}
+                      </Form.Control.Feedback>
+                    </Form.Group>
 
-                        <Form.Group controlId="formPassword" className="mb-3">
-                          <Form.Label>Password</Form.Label>
-                          <Form.Control
-                            type="password"
-                            name="password"
-                            placeholder="Enter password"
-                            value={values.password}
-                            onChange={handleChange}
-                            isInvalid={touched.password && !!errors.password}
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {errors.password}
-                          </Form.Control.Feedback>
-                        </Form.Group>
+                    <Form.Group controlId="formPassword" className="mb-3">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control
+                        type="password"
+                        name="password"
+                        placeholder="Enter password"
+                        value={values.password}
+                        onChange={handleChange}
+                        isInvalid={touched.password && !!errors.password}
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.password}
+                      </Form.Control.Feedback>
+                    </Form.Group>
 
-                        {firebaseError && (
-                          <div className="text-danger mb-3 text-center">
-                            {firebaseError}
-                          </div>
-                        )}
-
-                        <Button
-                          variant="primary"
-                          type="submit"
-                          className="w-100"
-                          disabled={isSubmitting}
-                        >
-                          {isSubmitting ? 'Logging in...' : 'Login'}
-                        </Button>
-                      </Form>
+                    {firebaseError && (
+                      <div className="text-danger mb-3 text-center">
+                        {firebaseError}
+                      </div>
                     )}
-                  </Formik>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+
+                    <Button
+                      variant="primary"
+                      type="submit"
+                      className="w-100"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Logging in...' : 'Login'}
+                    </Button>
+                  </Form>
+                )}
+              </Formik>
+            </Card.Body>
+          </Card>
         </Container>
       </div>
     </>
