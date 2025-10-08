@@ -459,7 +459,7 @@
 .announcements-section {
   min-height: 100vh;
   padding-top: 80px; /* keeps space below navbar */
-  background: linear-gradient(180deg, #101820, #1b2735);
+  background: url("/src/assets/background.jpg") no-repeat center center/cover;
   color: white;
 }
 
