@@ -14,7 +14,7 @@ const Dashboard = () => {
             <div className="d-flex">
                 <AdminSidebar />
                 <div className="flex-grow-1">
-                    <div className="flex-grow-1 p-3" style={{ marginLeft: '250px', marginTop: '56px' }}>
+                    <div className="flex-grow-1 p-3 dashboard-content">
                         <DashboardCards />
 
                         <div className="container my-4">

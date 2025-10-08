@@ -736,3 +736,92 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* --- Desktop layout --- */
+.dashboard-content {
+  margin-left: 250px;
+  margin-top: 56px;
+  transition: margin-left 0.3s ease;
+}
+
+/* --- Sidebar (desktop default) --- */
+.admin-sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+/* --- Mobile layout --- */
+@media (max-width: 991px) {
+  .dashboard-content {
+    margin-left: 0 !important;
+    padding: 1rem;
+  }
+
+  .admin-sidebar {
+    left: -250px;
+  }
+
+  .admin-sidebar.open {
+    left: 0;
+  }
+
+  /* --- Toggle button --- */
+  .sidebar-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #6c757d;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    z-index: 1100;
+  }
+
+  .sidebar-toggle .hamburger {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+  }
+
+  .sidebar-toggle .hamburger::before,
+  .sidebar-toggle .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    transition: 0.3s;
+  }
+
+  .sidebar-toggle .hamburger::before {
+    top: -6px;
+  }
+
+  .sidebar-toggle .hamburger::after {
+    top: 6px;
+  }
+
+  .sidebar-toggle .hamburger.active {
+    background: transparent;
+  }
+
+  .sidebar-toggle .hamburger.active::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .sidebar-toggle .hamburger.active::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
