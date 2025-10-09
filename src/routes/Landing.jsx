@@ -26,7 +26,7 @@ export const Landing = () => {
 
             <div className="mt-4">
               <a
-                href="https://l.facebook.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1h5u2DqtaJxYZsM2wjSgD_SJ37HsBrYyp%2Fview%3Fusp%3Ddrive_link%26fbclid%3DIwZXh0bgNhZW0CMTAAAR3hUkJa8Ctjp78FzXokmc-_TsUUBy2NNmVPOVyQvJdGhdFvx1oEJWLb2y8_aem_vKUfQmnytakCk8l679uu7Q&h=AT37g4kcAnVWDcceqy5jHuFKuN07mBLnu4yFPLVxWlgbr12n9R-Qt5fLM0qzg7_IvXJL-HsPLlBdkP39nyfGemyqg4Y_BvPDF17PxsRL-jm8NlAvAomLhzkJ2aiA0CjP6R8jdA"
+                href="https://drive.google.com/file/d/1X2G4Ds-ao7ci1MEM556SxlxpMzUMYuTj/view?usp=sharing"
                 className="btn btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -39,7 +39,7 @@ export const Landing = () => {
             <ul className="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-start mt-3 mb-0">
               <li className="me-3"><span>Android</span></li>
               <li className="me-3"><span>APK</span></li>
-              <li><span>335 MB</span></li>
+              <li><span>338 MB</span></li>
             </ul>
           </div>
         </div>
