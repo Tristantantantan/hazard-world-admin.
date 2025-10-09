@@ -716,3 +716,96 @@
     padding: 0.6rem;
   }
 }
+
+/* ====== ANNOUNCEMENT PAGE CARDS (restore translucent style) ====== */
+.full-screen-bg .announcement-card {
+  background: rgba(30, 30, 30, 0.75); /* translucent dark glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #f8fafc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.full-screen-bg .announcement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.full-screen-bg .announcement-card .card-title {
+  color: #ffffff;
+}
+
+.full-screen-bg .announcement-card .card-text {
+  color: #e5e7eb;
+}
+
+/* ====== ANNOUNCEMENT MODAL (Centered and Stylish) ====== */
+/* ====== MODAL DIALOG CENTERING FIX ====== */
+.modal.show {
+  display: flex !important; /* force flex for centering */
+  align-items: center !important; /* vertical center */
+  justify-content: center !important; /* horizontal center */
+}
+
+.modal-dialog {
+  margin: 0 !important; /* remove default Bootstrap margins */
+  max-width: 550px; /* smaller modal width */
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: rgba(25, 25, 25, 0.85); /* dark glass */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.2rem;
+  color: #f8fafc;
+  position: relative;
+  animation: fadeSlideIn 0.35s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal title & body */
+.modal-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.modal-body {
+  max-height: 55vh;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: justify;
+  color: #e5e7eb;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%;
+  }
+  .modal-title {
+    font-size: 1.2rem;
+  }
+  .modal-body {
+    max-height: 50vh;
+    font-size: 0.9rem;
+  }
+}
