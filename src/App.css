@@ -658,3 +658,62 @@
   align-items: center;
   gap: 12px; /* spacing between logo and hamburger */
 }
+
+/* ====== LOGIN PAGE RESPONSIVE BACKGROUND ====== */
+.full-screen-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6rem; /* make room for fixed navbar */
+  padding-bottom: 2rem;
+}
+
+/* LOGIN PAGE CARD STYLING */
+.full-screen-bg .card {
+  background: rgba(30, 30, 30, 0.75); /* glassy dark effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ====== MOBILE VIEW ====== */
+@media (max-width: 991px) {
+  .full-screen-bg {
+    flex-direction: column;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+    height: auto;
+  }
+
+  .full-screen-bg .card {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* ====== EXTRA SMALL DEVICES (below 576px) ====== */
+@media (max-width: 576px) {
+  .full-screen-bg {
+    padding-top: 6rem;
+  }
+
+  .full-screen-bg .card-title {
+    font-size: 1.6rem;
+  }
+
+  .full-screen-bg .form-label {
+    font-size: 0.9rem;
+  }
+
+  .full-screen-bg .btn {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}
