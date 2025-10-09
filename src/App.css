@@ -673,13 +673,12 @@
 }
 
 /* LOGIN PAGE CARD STYLING */
+/* LOGIN PAGE CARD (solid white background) */
 .full-screen-bg .card {
-  background: rgba(30, 30, 30, 0.75); /* glassy dark effect */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #ffffff; /* pure white */
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* ====== MOBILE VIEW ====== */
