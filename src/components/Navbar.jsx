@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import cmuLogo from '../assets/cmu-logo.png';
 import { Link } from 'react-router-dom';
+import cmuLogo from '../assets/cmu-logo.png';
 
 const navItems = [
   { name: 'About Hazard World', path: '/about' },
@@ -14,42 +14,36 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="navbar fixed-top">
-        <div className="container d-flex justify-content-between align-items-center">
-            {/* Logo + Hamburger grouped */}
-            <div className="d-flex align-items-center gap-3">
-            <Link to="/" className="d-flex align-items-center" onClick={closeMenu}>
-                <img src={cmuLogo} alt="Logo" width="200" height="60" />
+    <nav className={`navbar fixed-top ${menuOpen ? 'menu-open' : ''}`}>
+            <div className="container d-flex align-items-center justify-content-between">
+        <div className="logo-and-toggle d-flex align-items-center">
+            <Link to="/" className="navbar-logo" onClick={closeMenu}>
+            <img src={cmuLogo} alt="Logo" />
             </Link>
-
-            {/* Hamburger icon (visible only on mobile) */}
-            <button
-                className="navbar-toggler d-lg-none"
-                type="button"
-                onClick={toggleMenu}
-            >
-                <span className={`hamburger ${menuOpen ? 'active' : ''}`}></span>
-            </button>
+            <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
             </div>
-
-            {/* Navigation links */}
-            <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-            {navItems.map((item, index) => (
-                <li key={index}>
-                <Link to={item.path} className="nav-link" onClick={closeMenu}>
-                    {item.name}
-                </Link>
-                </li>
-            ))}
-                <li>
-                <Link to="/login" onClick={closeMenu}>
-                <button className="btn btn-primary mt-2 mt-lg-0">Admin Login</button>
-                </Link>
-                </li>
-            </ul>
         </div>
-    </nav>
 
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+            {navItems.map((item, index) => (
+            <li key={index}>
+                <Link className="nav-link" to={item.path} onClick={closeMenu}>
+                {item.name}
+                </Link>
+            </li>
+            ))}
+            <li>
+            <Link to="/login" onClick={closeMenu}>
+                <button className="btn-login">Admin Login</button>
+            </Link>
+            </li>
+        </ul>
+        </div>
+
+    </nav>
   );
 };
 
