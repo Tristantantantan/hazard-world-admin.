@@ -396,7 +396,7 @@
 
 /* LOGIN BUTTON */
 .btn-login {
-  background: linear-gradient(90deg, #111, #222);
+  background: #046ffa;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   font-weight: 600;
@@ -495,7 +495,7 @@
     width: 80%;
     text-align: center;
     margin-top: 0.8rem;
-    background: linear-gradient(90deg, #111, #222);
+    background: #046ffa;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
     font-weight: 600;

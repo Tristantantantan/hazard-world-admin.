@@ -13,7 +13,7 @@ export const Landing = () => {
                         <h4 className='my-4'>Nature&apos;s Fury. A Volcanologist&apos;s Journey</h4>
                         <span>Venture through perilous regions in search of Mt. Thesaurus&apos; hidden treasure.</span>
                         <div className="mt-4">
-                            <a href="https://drive.google.com/file/d/1hCZZH1mIU9XsIk-ef4vV-CSIwQAzKtD3/view" className="btn btn-primary">
+                            <a href="https://drive.google.com/file/d/1nusEg-VZbcQxCd01No4fUFkv5lXa4q6E/view" className="btn btn-primary">
                                 <i className="bi bi-download me-2"></i>
                                 Download Game
                             </a>
@@ -26,7 +26,7 @@ export const Landing = () => {
                                 <span>APK</span>
                             </li>
                             <li className="me-4">
-                                <span>335 MB</span>
+                                <span>337 MB</span>
                             </li>
                         </div>
                     </div>
