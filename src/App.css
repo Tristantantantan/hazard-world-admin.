@@ -242,13 +242,13 @@
 }
 
 .modal-footer .btn-secondary {
-  background: rgba(255, 255, 255, 0.2);
+  background: #046ffa;
   border: none;
   color: #fff;
 }
 
 .modal-footer .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 157, 255, 0.3);
 }
 
 /* ======== MOBILE RESPONSIVENESS ======== */
