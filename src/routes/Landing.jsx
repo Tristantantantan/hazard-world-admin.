@@ -13,7 +13,7 @@ export const Landing = () => {
                         <h4 className='my-4'>Nature&apos;s Fury. A Volcanologist&apos;s Journey</h4>
                         <span>Venture through perilous regions in search of Mt. Thesaurus&apos; hidden treasure.</span>
                         <div className="mt-4">
-                            <a href="https://drive.google.com/file/d/1K7-Do1Qx3zlTM7uBd0J2RnKREbxRWbEC/view" className="btn btn-primary">
+                            <a href="https://drive.google.com/file/d/1Mo7Ns61MrHK-F4okUFGfavxGuffclI09/view" className="btn btn-primary">
                                 <i className="bi bi-download me-2"></i>
                                 Download Game
                             </a>
